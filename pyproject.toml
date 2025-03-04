@@ -1,0 +1,23 @@
+[project]
+name = "streamlit_brdtosrs"
+version = "0.1.0"
+description = "streamlit-brdtosrs using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.102.0,<1.0.0"
+]
+
+[project.scripts]
+streamlit_brdtosrs = "streamlit_brdtosrs.main:run"
+run_crew = "streamlit_brdtosrs.main:run"
+train = "streamlit_brdtosrs.main:train"
+replay = "streamlit_brdtosrs.main:replay"
+test = "streamlit_brdtosrs.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

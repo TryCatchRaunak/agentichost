@@ -1,0 +1,45 @@
+business_analysis_task:
+  description: >
+    Extract contents for -Introduction -Purpose -Scope -In Scope -Out of Scope -Assumptions -References -Overview separately from the provided business requirements document.  
+    Ensure that the extracted "Out of Scope" and "Assumptions" sections are correctly captured from the BRD without modification.
+  expected_output: >
+    Clear and detailed sections for Introduction, Purpose, Scope, In Scope, Out of Scope, Assumptions, References, and Overview with enhanced explanations where needed.
+  agent: business_analyst
+
+
+technical_analysis_task:
+  description: >
+    Extract contents for -Data Model -User Characteristics -Codification Schemes -Dependencies separately from the business requirements document.  
+    Use the LLM and internet to enhance vague sections for clarity and completeness.
+  expected_output: >
+    Clear and detailed technical sections for Data Model, User Characteristics, Codification Schemes, Assumptions, Dependencies, and Out of Scope.
+  agent: technical_analyst
+
+requirement_categorize_task:
+  description: >
+    Categorize extracted requirements into Functional, Non-Functional, and Technical requirements.  
+    Use the LLM to refine vague sections and ensure clarity.
+  expected_output: >
+    A structured list of Functional, Non-Functional, and Technical requirements with well-explained descriptions.
+  agent: requirement_categorizer
+
+srs_write_task:
+  description: >
+    Write down the structured SRS document incorporating:
+    - **Introduction, Purpose, Scope, In Scope, Out of Scope, Assumptions, References, and Overview** (from Business Analyst)
+    - **Functional, Non-Functional, and Technical Requirements** (from Requirement Categorizer)
+    - **Data Model, User Characteristics, Codification Schemes** (from Technical Analyst)
+    Ensure that "Out of Scope" and "Assumptions" sections are included exactly as extracted from the BRD without modification.
+  expected_output: >
+    A fully written, structured, and polished SRS document incorporating all extracted and categorized information, ensuring that Out of Scope and Assumptions match the BRD.
+  agent: srs_writer
+
+
+srs_format_task:
+  description: >
+    Format the final SRS document with appropriate headings, line breaks, and structured sections.  
+    Ensure that the "Out of Scope" section is correctly placed after "In Scope".  
+    Ensure that "Assumptions" is correctly formatted with bullet points and listed before "Dependencies".
+  expected_output: >
+    The final SRS document is properly formatted with bolded, capitalized headings, clear section divisions, and includes "Out of Scope," "Assumptions," "Dependencies," and "Conclusion" sections saved as 'srs1.md'.
+  agent: srs_formatter
