@@ -1,0 +1,5 @@
+streamlit
+crewai
+crewai_tool
+python_dotenv
+chromadb>=3.35
