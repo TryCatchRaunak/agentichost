@@ -1,5 +1,5 @@
 streamlit
 crewai
-crewai_tool
+crewai_tools
 python_dotenv
-chromadb>=3.35
+chromadb
