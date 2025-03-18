@@ -5,8 +5,11 @@
         "Brdtosrs",
         "crewai",
         "dotenv",
+        "litellm",
         "pycache",
         "pysbd",
-        "Raunak"
+        "pysqlite",
+        "Raunak",
+        "streamlit"
     ]
 }

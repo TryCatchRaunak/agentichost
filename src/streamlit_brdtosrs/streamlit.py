@@ -1,3 +1,7 @@
+__import__('pysqlite3')
+import sys
+sys.module['sqlite3'] = sys.modules.pop['pysqlite3']
+
 import streamlit as st
 from crew import BrdToSrs
 
